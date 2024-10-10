@@ -86,6 +86,9 @@ const anySlotSet = isLogoSlotSet || isTitleSlotSet || isDescSlotSet || isSubDesc
   transition: background-color 0.3s;
   border-radius: 0%;
 }
+.list-item:hover {
+    background-color: rgba(211, 211, 211, 0.301);
+}
 .action-btn {
   margin-left: auto;
   align-self: center;
