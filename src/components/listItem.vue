@@ -25,14 +25,14 @@
       <template v-else>
         <slot name="logo" alt="Logo" class="avatar"></slot>
         <div class="flex-grow-1">
-          <h5 class="mb-1"><slot name="title" v-if="isTitleSlotSet">Default Title</slot></h5>
-          <p class="description"><slot name="desc" v-if="isDescSlotSet">Default Description</slot></p>
+          <h5 class="mb-1"><slot name="title" v-if="isTitleSlotSet"></slot></h5>
+          <p class="description"><slot name="desc" v-if="isDescSlotSet"></slot></p>
           <small class="sub-description text-muted"
-            ><slot name="subDesc"v-if="isSubDescSlotSet">Default Sub Description</slot
+            ><slot name="subDesc"v-if="isSubDescSlotSet"></slot
           ></small>
         </div>
         <slot name="action" v-if="isActionSlotSet">
-          <span class="badge bg-success rounded-pill">action</span>
+          <span class="badge bg-success rounded-pill"></span>
         </slot>
       </template>
     </div>
@@ -40,18 +40,18 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, computed, useSlots } from "vue";
-import type { IListItem } from "@/meta/interfaces/i-list-item";
+import { defineProps, computed, useSlots } from "vue"
+import type { IListItem } from "@/meta/interfaces/i-list-item"
 
-const props = defineProps<IListItem>() as IListItem;
-const slots = useSlots();
+const props = defineProps<IListItem>() as IListItem
+const slots = useSlots()
 
 const borderClass = computed(() => {
-  return `border-${props.color}`;
-});
+  return `border-${props.color}`
+})
 
-const isLogoSlotSet = !!slots.logo;
-const isTitleSlotSet = !!slots.title;
+const isLogoSlotSet = !!slots.logo
+const isTitleSlotSet = !!slots.title
 const isDescSlotSet = !!slots.desc
 const isSubDescSlotSet = !!slots.subDesc
 const isActionSlotSet = !!slots.action

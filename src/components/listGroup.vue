@@ -39,12 +39,16 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from "vue";
-import VListItem from "@/components/listitem.vue";
-import { actionsEnum } from "@/meta/enums/actions";
-import type { IListGroup } from "@/meta/interfaces/i-list-group";
+import { defineAsyncComponent, defineProps } from "vue"
+import { actionsEnum } from "@/meta/enums/actions"
+import type { IListGroup } from "@/meta/interfaces/i-list-group"
 
-const props = defineProps<IListGroup>() as IListGroup;
+const props = defineProps<IListGroup>() as IListGroup
+
+const VListItem = defineAsyncComponent(()=>
+  import('@/components/listitem.vue')
+)
+
 </script>
 
 <style scoped>

@@ -2,44 +2,46 @@
   <!-- Default list Item-->
   <div class="d-flex justify-content-center">
     <div class="text h4 mt-4">
-    This is the call to the component v-list-item without any slots and without any props.<br />
-    So, the default values will appear as:
-    <ul>
-      <li>Avatar</li>
-      <li>Title</li>
-      <li>Description</li>
-      <li>Sub Description</li>
-      <li>Action</li>
-    </ul>
+      This is the call to the component v-list-item without any slots and without any
+      props.<br />
+      So, the default values will appear as:
+      <ul>
+        <li>Avatar</li>
+        <li>Title</li>
+        <li>Description</li>
+        <li>Sub Description</li>
+        <li>Action</li>
+      </ul>
+    </div>
   </div>
-</div>
   <v-list-item />
   <br />
   <hr />
 
   <!--List Item With Full props and slots-->
   <div class="d-flex justify-content-center">
-  <div class="text h4">
-    This is the call to the component v-list-item with slots and props.<br />
-    The values will appear as avatar, title, description, sub description, and action.<br />
-    If any data is not provided, it will not appear.<br />
-    <br />
-    The props are:
-    <ul>
-      <li>color (left border color)</li>
-      <li>border (true or false, if you want to show the left border)</li>
-      <li>disabled (boolean)</li>
-    </ul>
-    The slots are:
-    <ul>
-      <li>#title</li>
-      <li>#logo (send image or avatar)</li>
-      <li>#desc</li>
-      <li>#subDesc</li>
-      <li>#action</li>
-    </ul>
+    <div class="text h4">
+      This is the call to the component v-list-item with slots and props.<br />
+      The values will appear as avatar, title, description, sub description, and
+      action.<br />
+      If any data is not provided, it will not appear.<br />
+      <br />
+      The props are:
+      <ul>
+        <li>color (left border color)</li>
+        <li>border (true or false, if you want to show the left border)</li>
+        <li>disabled (boolean)</li>
+      </ul>
+      The slots are:
+      <ul>
+        <li>#title</li>
+        <li>#logo (send image or avatar)</li>
+        <li>#desc</li>
+        <li>#subDesc</li>
+        <li>#action</li>
+      </ul>
+    </div>
   </div>
-</div>
 
   <v-list-item :color="'blue'" :border="true" :disabled="false">
     <template #title>Mohammad Aljamal</template>
@@ -58,15 +60,11 @@
 
   <!--List Item With non-Full props and slots-->
   <div class="d-flex justify-content-center h4">
-    Multi Examples for using the list item : <br/>
+    Multi Examples for using the list item : <br />
   </div>
-  <div class="d-flex justify-content-center h4">
-    1 -sent just title slot <br/>
-  </div>
+  <div class="d-flex justify-content-center h4">1 -sent just title slot <br /></div>
   <v-list-item> <template #title>Mohammad Aljamal</template> </v-list-item><br />
-  <div class="d-flex justify-content-center h4">
-    2 -sent title and action slot <br/>
-  </div>
+  <div class="d-flex justify-content-center h4">2 -sent title and action slot <br /></div>
   <v-list-item>
     <template #title>Mohammad Aljamal</template>
     <template #action
@@ -74,7 +72,7 @@
     > </v-list-item
   ><br />
   <div class="d-flex justify-content-center h4">
-    3 -sent title and logo slots with props(border : true - color : red)<br/>
+    3 -sent title and logo slots with props(border : true - color : red)<br />
   </div>
   <v-list-item :border="true" :color="'red'">
     <template #title>Mohammad Aljamal</template>
@@ -86,7 +84,7 @@
     /></template> </v-list-item
   ><br />
   <div class="d-flex justify-content-center h4">
-    4 -sent title, logo, action slots with props(border : true - color : blue)<br/>
+    4 -sent title, logo, action slots with props(border : true - color : blue)<br />
   </div>
   <v-list-item :color="'blue'" :border="true">
     <template #title>Mohammad Aljamal</template>
@@ -101,7 +99,8 @@
     > </v-list-item
   ><br />
   <div class="d-flex justify-content-center h4">
-    5 -sent title, logo, action, description slots with props(border : true - color : blue)<br/>
+    5 -sent title, logo, action, description slots with props(border : true - color :
+    blue)<br />
   </div>
   <v-list-item :color="'blue'" :border="true">
     <template #title>Mohammad Aljamal</template>
@@ -117,7 +116,8 @@
     > </v-list-item
   ><br />
   <div class="d-flex justify-content-center h4">
-    6 -sent title, logo, action, description slots with props(border : true - color : yellow - disabled : true)<br/>
+    6 -sent title, logo, action, description slots with props(border : true - color :
+    yellow - disabled : true)<br />
   </div>
   <v-list-item :color="'yellow'" :border="true" :disabled="true">
     <template #title>Mohammad Aljamal</template>
@@ -133,7 +133,8 @@
     > </v-list-item
   ><br />
   <div class="d-flex justify-content-center h4">
-    7 -sent title, logo, action, description, sub description slots with props(border : true - color : green - disabled : true)<br/>
+    7 -sent title, logo, action, description, sub description slots with props(border :
+    true - color : green - disabled : true)<br />
   </div>
   <v-list-item :color="'green'" :border="true">
     <template #title>Mohammad Aljamal</template>
@@ -153,27 +154,28 @@
   <hr />
   <div class="d-flex justify-content-center h4">
     <div class="text h4">
-    If you want to display the list in a list group, just call the <strong>v-list-group</strong> component.<br />
-    Send the props that define the list of items you want to show:<br />
-    <strong>:list='your lists data name'</strong> and the list data should contain:
-    <ul>
+      If you want to display the list in a list group, just call the
+      <strong>v-list-group</strong> component.<br />
+      Send the props that define the list of items you want to show:<br />
+      <strong>:list='your lists data name'</strong> and the list data should contain:
+      <ul>
         <li>Header</li>
-        <li>Items:
-            <ul>
-                <li>Logo</li>
-                <li>Title</li>
-                <li>Description</li>
-                <li>Action</li>
-                <li>Sub Description</li>
-                <li>Border (boolean)</li>
-                <li>Color (red,green,blue,yellow and so on)</li>
-                <li>Disabled (boolean)</li>
-            </ul>
+        <li>
+          Items:
+          <ul>
+            <li>Logo</li>
+            <li>Title</li>
+            <li>Description</li>
+            <li>Action</li>
+            <li>Sub Description</li>
+            <li>Border (boolean)</li>
+            <li>Color (red,green,blue,yellow and so on)</li>
+            <li>Disabled (boolean)</li>
+          </ul>
         </li>
-    </ul>
+      </ul>
     </div>
-</div>
-
+  </div>
 
   <!-- List Group -->
   <template v-for="list in lists" :key="list.header">
@@ -182,9 +184,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import VListGroup from "@/components/listGroup.vue";
-import VListItem from "@/components/listItem.vue";
+import { defineAsyncComponent, ref } from "vue"
+
 const lists = ref([
   {
     header: "Barcelona Players",
@@ -273,7 +274,7 @@ const lists = ref([
           "One of the club's all-time top scorers, with numerous La Liga and Champions League titles.",
         border: true,
         color: "blue",
-        disabled: true,
+        disabled: false,
       },
       {
         logo:
@@ -289,6 +290,13 @@ const lists = ref([
       },
     ],
   },
-]);
+])
+
+const VListGroup = defineAsyncComponent(()=>
+  import('@/components/listGroup.vue')
+)
+const VListItem = defineAsyncComponent(()=>
+  import('@/components/listItem.vue')
+)
 </script>
 <style scoped></style>
